@@ -10,7 +10,7 @@ const App = () => {
   useEffect(() => {
     const fetchdata = async () => {
       const response = await axios.get(
-        "https://expense-tracker-gk43.onrender.com/api/expenses"
+        "https://expense-tracker-backend-1-yayd.onrender.com/api/expenses"
       );
       setTransactions(response.data);
     };
@@ -19,7 +19,7 @@ const App = () => {
 
   const addToList = async (title, amount) => {
     const response = await axios.post(
-      "https://expense-tracker-gk43.onrender.com/api/expenses",
+      "hhttps://expense-tracker-backend-1-yayd.onrender.com/api/expenses",
       {
         title,
         amount,
@@ -30,7 +30,7 @@ const App = () => {
 
   const removeFromList = async (id) => {
     await axios.delete(
-      `https://expense-tracker-gk43.onrender.com/api/expenses/${id}`
+      `https://expense-tracker-backend-1-yayd.onrender.com/api/expenses/${id}`
     );
     const newTransaction = transactions.filter((txn) => txn.id !== id);
     setTransactions(newTransaction);
